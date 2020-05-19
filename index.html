@@ -1,0 +1,80 @@
+﻿
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>CECS 343 Part 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h3>343 VCS P2</h3>
+        <h3>Note: Type directory (C:\users\name\folder)</h3>
+        <div><h3>Create Repository</h3></div>
+        <form action="http://localhost:3000/get_create" method="GET" onsubmit="output_text(); return false;">
+            <label for="origin">Project Location:</label><br>
+            <input type="text" id="origin" name="origin"><br>
+            <label for="target">Target Location:</label><br>
+            <input type="text" id="target" name="target"><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <div><h3>Check In</h3></div>
+        <form action="http://localhost:3000/get_check_in" method="GET" onsubmit="output_text(); return false;">
+            <label for="origin">File Location:</label><br>
+            <input type="text" id="fileLoc" name="fileLoc"><br>
+            <label for="target">Repository Location:</label><br>
+            <input type="text" id="repoCheckInLoc" name="repoCheckInLoc"><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <div><h3>Check Out</h3></div>
+        <form action="http://localhost:3000/get_check_out" method="GET" onsubmit="output_text(); return false;">
+            <label for="origin">Manifest File Name:</label><br>
+            <input type="text" id="manifestName" name="manifestName"><br>
+            <label for="origin">Repository Location:</label><br>
+            <input type="text" id="checkoutRepoLoc" name="checkoutRepoLoc"><br>
+            <label for="origin">Target Folder Location:</label><br>
+            <input type="text" id="checkoutTarget" name="checkoutTarget"><br>
+            <input type="submit" value="Submit">
+        </form>
+        <div><h3>Label</h3></div>
+        <form action="http://localhost:3000/get_label" method="GET" onsubmit="output_text(); return false;">
+            <label for="origin">Label:</label><br>
+            <input type="text" id="label" name="label"><br>
+            <label for="origin">Repository Location:</label><br>
+            <input type="text" id="labelRepoLoc" name="labelRepoLoc"><br>
+            <label for="origin">Current Manifest/Label name:</label><br>
+            <input type="text" id="labelManifestName" name="labelManifestName"><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <div><h3>List Manifests</h3></div>
+        <form action="http://localhost:3000/get_list" method="GET" onsubmit="output_text(); return false;">
+            <label for="origin">Repository Location:</label><br>
+            <input type="text" id="repoLoc" name="repoLoc"><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <div><h3>Merge Out</h3></div>
+        <form action="http://localhost:3000/get_merge_out" method="GET" onsubmit="output_text(); return false;">
+            <label for="origin">Repository Location:</label><br>
+            <input type="text" id="repoLoc" name="repoLoc"><br>
+            <label for="origin">Repository Snapshot Location:</label><br>
+            <input type="text" id="repoSnapLoc" name="repoSnapLoc"><br>
+            <label for="origin">Target Folder Location:</label><br>
+            <input type="text" id="targetLoc" name="targetLoc"><br>
+            <input type="submit" value="Submit">
+        </form>
+        
+        <div><h3>Merge In</h3></div>
+        <form action="http://localhost:3000/get_merge_in" method="GET" onsubmit="output_text(); return false;">
+            <label for="origin">File Location:</label><br>
+            <input type="text" id="mergeFileLoc" name="mergeFileLoc"><br>
+            <label for="target">Repository Location:</label><br>
+            <input type="text" id="mergeRepoCheckInLoc" name="mergeRepoCheckInLoc"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+
+</html>
